@@ -1,4 +1,5 @@
 import { FC } from "react"
+import "./Header.css"
 
 type HeaderProps = {
     children: string
@@ -6,7 +7,7 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ children }) => {
     return (
-        <div>
+        <div className="header-container">
             <h1>
                 {children}
             </h1>
