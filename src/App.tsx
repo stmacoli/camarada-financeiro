@@ -3,7 +3,7 @@ import Header from "./components/Header";
 const App = () => {
   return (
     <div>
-      <Header title="Camarada Financeiro"/>
+      <Header>Camarada Financeiro</Header>
     </div>
   );
 };

@@ -1,14 +1,14 @@
 import { FC } from "react"
 
 type HeaderProps = {
-    title: string
+    children: string
 }
 
-const Header: FC<HeaderProps> = ({ title }) => {
+const Header: FC<HeaderProps> = ({ children }) => {
     return (
         <div>
             <h1>
-                {title}
+                {children}
             </h1>
         </div>
     )
