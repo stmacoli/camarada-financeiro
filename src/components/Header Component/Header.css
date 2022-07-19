@@ -1,8 +1,10 @@
 .header-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
-    height: 150px;
-    color: yellow;
-    
+    height: 15vh;
+    max-height: 150px;
+    color: yellow;    
 }
 
