@@ -1,7 +1,8 @@
-import Header from "./components/Header Component/Header";
+import Header from "./components/Header/Header";
 
 import "./App.css";
-import Table from "./components/Table Component/Table";
+import Table from "./components/Table/Table";
+import Form from "./components/Form/Form";
 
 const TABLE_MOCK_DATA = [
   {
