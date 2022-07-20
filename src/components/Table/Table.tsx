@@ -1,15 +1,22 @@
-import { FC } from "react"
+import { FC } from "react";
 
-type TableItem  = {
-  nome?: string;
-  categoria?: string;
-  valor?: number;
-  data?: string;
+type TableItem = {
+  nome: string;
+  categoria: string;
+  valor: number;
+  data: string;
+  id?: string
 };
 
-const TableRow : FC<TableItem> = ({nome, categoria, valor, data}) => {
+type TableRowProps = {
+  nome: string;
+  categoria: string;
+  valor: number;
+  data: string;  
+}
+
+const TableRow: FC<TableRowProps> = ({ nome, categoria, valor, data}) => {
   return (
-    
     <tr>
       <th>{data}</th>
       <td>{nome}</td>
@@ -19,36 +26,32 @@ const TableRow : FC<TableItem> = ({nome, categoria, valor, data}) => {
   );
 };
 
-
 type TableProps = {
   data: TableItem[];
 };
 
-const Table = () => {
+const Table: FC<TableProps> = ({ data }) => {
   return (
     <div>
       <table>
         <thead>
           <tr>
+            <th>Data</th>
             <th>Nome</th>
             <th>Categoria</th>
             <th>Valor</th>
-            <th>Data</th>
           </tr>
         </thead>
         <tbody>
-          <TableRow nome="burguer king" categoria="Refeição" data="20/10/2022" valor={169.69}/>
-          <tr>
-            <th>2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {data.map((item) => (
+            <TableRow
+            key={item.id}
+              nome={item.nome}
+              categoria={item.categoria}
+              valor={item.valor}
+              data={item.data}
+            />
+          ))}
         </tbody>
       </table>
     </div>
