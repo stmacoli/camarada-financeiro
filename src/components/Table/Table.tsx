@@ -5,7 +5,7 @@ type TableItem = {
   categoria: string;
   valor: number;
   data: string;
-  id?: string
+  id: string
 };
 
 type TableRowProps = {
