@@ -2,6 +2,13 @@ const Form = () => {
   return (
     <form>
       <div>
+        <label>Data</label>
+        <div>
+          {/* CASO DÊ MTO TRABALHO, PODEMOS MUDAR ESSE TYPE PARA TEXT */}
+          <input type={"datetime-local"}/>
+        </div>
+      </div>
+      <div>
         <label>Nome da Entrada</label>
         <div>
           <input type="text" placeholder="Dispensa do Mercado" />
