@@ -1,53 +1,32 @@
 const Form = () => {
   return (
-    <form className="row row-cols-lg-auto g-3 align-items-center">
-      <div className="col-12">
-        <label
-          className="visually-hidden"
-          htmlFor="inlineFormInputGroupUsername"
-        >
-          Username
-        </label>
-        <div className="input-group">
-          <div className="input-group-text">@</div>
-          <input
-            type="text"
-            className="form-control"
-            id="inlineFormInputGroupUsername"
-            placeholder="Username"
-          />
+    <form>
+      <div>
+        <label>Nome da Entrada</label>
+        <div>
+          <input type="text" placeholder="Dispensa do Mercado" />
         </div>
       </div>
 
-      <div className="col-12">
-        <label className="visually-hidden" htmlFor="inlineFormSelectPref">
-          Preference
-        </label>
-        <select className="form-select" id="inlineFormSelectPref">
-          <option selected>Choose...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+      <div>
+        <label>Valor</label>
+        <div>
+          <input type="number" placeholder="R$" />
+        </div>
+      </div>
+
+      <div>
+        <label>Categorias</label>
+        <select>
+          <option selected>Expandir</option>
+          <option value="1">Mercado</option>
+          <option value="2">Lazer</option>
+          <option value="3">Música</option>
         </select>
       </div>
 
-      <div className="col-12">
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            id="inlineFormCheck"
-          />
-          <label className="form-check-label" htmlFor="inlineFormCheck">
-            Remember me
-          </label>
-        </div>
-      </div>
-
-      <div className="col-12">
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+      <div>
+        <button type="submit">Submit</button>
       </div>
     </form>
   );

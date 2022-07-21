@@ -39,6 +39,7 @@ const App = () => {
   return (
     <div className="container">
       <Header> Camarada Financeiro </Header>
+      <Form />
       <Table data={TABLE_MOCK_DATA} />
     </div>
   );

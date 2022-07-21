@@ -1,12 +1,4 @@
-import { FC } from "react";
-
-type TableItem = {
-  nome: string;
-  categoria: string;
-  valor: number;
-  data: string;
-  id: string
-};
+import { FC } from "react"
 
 type TableRowProps = {
   nome: string;
@@ -24,6 +16,15 @@ const TableRow: FC<TableRowProps> = ({ nome, categoria, valor, data}) => {
       <td>{valor}</td>
     </tr>
   );
+};
+
+interface TableItem extends TableRowProps {
+  // PROPS ADQUIRIDAS ATRAVES DO EXTENDS TABLEROWPROPS
+  // nome: string;
+  // categoria: string;
+  // valor: number;
+  // data: string; 
+  id: string
 };
 
 type TableProps = {
