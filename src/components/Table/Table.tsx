@@ -7,6 +7,7 @@ type TableRowProps = {
   data: string;  
 }
 
+
 const TableRow: FC<TableRowProps> = ({ nome, categoria, valor, data}) => {
   return (
     <tr>

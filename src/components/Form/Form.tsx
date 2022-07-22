@@ -1,13 +1,39 @@
-import { useState } from "react";
+import React, { FC, useState } from "react";
 
-const Form = () => {
+/* const TableRow: FC<TableRowProps> = ({ nome, categoria, valor, data}) => { */
+//teste
+
+type FormProps = {
+  onSubmit: (entrada: any) => string;
+};
+
+
+const Form: FC<FormProps> = ({onSubmit}) => {
   const [data, setData] = useState("");
   const [nome, setNome] = useState("");
   const [categoria, setCategoria] = useState("");
   const [valor, setValor] = useState(0);
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("Objeto Form", {
+      data,
+      nome,
+      categoria,
+      valor,
+    });
+    let entrada = {
+      data,
+      nome,
+      categoria,
+      valor,
+      id: Math.random()
+    }
+    onSubmit(entrada)
+  };
+
   return (
-    <form>
+    <form onSubmit={(event) => handleSubmit(event)}>
       <div>
         <label>Data</label>
         <div>
