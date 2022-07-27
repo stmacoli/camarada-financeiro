@@ -16,12 +16,7 @@ const Form: FC<FormProps> = ({onSubmit}) => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Objeto Form", {
-      data,
-      nome,
-      categoria,
-      valor,
-    });
+    
     let entrada = {
       data,
       nome,
