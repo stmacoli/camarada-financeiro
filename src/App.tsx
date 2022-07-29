@@ -8,35 +8,32 @@ import Form from "./components/Form/Form";
 
 const ENDPOINT = "http://localhost:3000/entradas";
 
-type TableDataState = Array<TableItem>
+type TableDataState = Array<TableItem>;
 
 const App = () => {
   const [tableData, setTableData] = useState<TableDataState>([]);
-  
 
-  useEffect(() => {
+  const handleReload = () => {
     axios.get(ENDPOINT).then((response) => {
-      console.log(response.data);
       setTableData(response.data);
     });
+  };
+
+  useEffect(() => {
+    handleReload();
   }, []);
 
   // promises assincronicidade
 
   const handleSubmit = (entrada: any) => {
     axios.post(ENDPOINT, entrada).then(() => {
-      axios.get(ENDPOINT).then((response) => {
-        console.log(response.data);
-        setTableData(response.data);
-      });
-      
-    })
+     handleReload();
+    });
     return "Sucesso!";
   };
 
   return (
     <div className="container">
-      
       <Header> Camarada Financeiro </Header>
       <Form onSubmit={handleSubmit} />
       <Table data={tableData} />
