@@ -1,42 +1,16 @@
 {
   "entradas": [
     {
-      "nome": "Mercado",
-      "categoria": "Casa",
-      "valor": 239.55,
-      "data": "20/10/2034",
-      "id": "1"
-    },
+      "data": "OUTROTESTE",
+      "nome": "CAIXA ALTA",
+      "categoria": "CABRADAPESTE",
+      "valor": 555777555999,
+      "id": 0.7217804385735689
+    }
+  ],
+  "categorias": [
     {
-      "nome": "Sex Shop",
-      "categoria": "Lazer",
-      "valor": 669.69,
-      "data": "20/10/2034",
-      "id": "2"
-    },
-    {
-      "nome": "Gibson Flying V",
-      "categoria": "Música",
-      "valor": 14239.35,
-      "data": "21/10/2034",
-      "id": "3"
-    },
-    {
-      "nome": "Estudos",
-      "categoria": "Investimentos",
-      "valor": 3239.55,
-      "data": "22/10/2034",
-      "id": "4"
-    },
-    {
-      "id": "89gjUKw"
-    },
-    {
-      "nome": "Playstation 5",
-      "categoria": "Lazer",
-      "valor": 5239.55,
-      "data": "29/10/2034",
-      "id": "5"
+      "name": "Lazer"
     }
   ]
 }

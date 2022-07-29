@@ -19,7 +19,7 @@ const TableRow: FC<TableRowProps> = ({ nome, categoria, valor, data}) => {
   );
 };
 
-interface TableItem extends TableRowProps {
+export interface TableItem extends TableRowProps {
   // PROPS ADQUIRIDAS ATRAVES DO EXTENDS TABLEROWPROPS
   // nome: string;
   // categoria: string;
